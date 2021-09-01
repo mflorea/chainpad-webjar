@@ -88,6 +88,31 @@
         </executions>
       </plugin>
       <plugin>
+        <groupId>com.google.code.maven-replacer-plugin</groupId>
+        <artifactId>replacer</artifactId>
+        <version>1.5.3</version>
+        <executions>
+          <execution>
+            <id>fix-license</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>replace</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <file>${extractDir}/chainpad.dist.js</file>
+          <replacements>
+            <!-- If we don't do this then the wrong license is kept in the minified JavaScript file (which bundles
+              multiple libraries with different licenses). -->
+            <replacement>
+              <token>/\*!</token>
+              <value>/\*</value>
+            </replacement>
+          </replacements>
+        </configuration>
+      </plugin>
+      <plugin>
         <groupId>com.github.blutorange</groupId>
         <artifactId>closure-compiler-maven-plugin</artifactId>
         <version>2.21.0</version>
