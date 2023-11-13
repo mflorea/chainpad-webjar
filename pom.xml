@@ -18,18 +18,18 @@
   <parent>
     <groupId>org.xwiki.contrib</groupId>
     <artifactId>parent-commons</artifactId>
-    <version>13.7</version>
+    <version>14.10</version>
   </parent>
   <packaging>jar</packaging>
   <artifactId>chainpad-webjar</artifactId>
-  <version>5.2.5-2-SNAPSHOT</version>
+  <version>5.2.7-SNAPSHOT</version>
   <name>ChainPad WebJar</name>
   <description>WebJar packaging for ChainPad</description>
   <url>https://github.com/xwiki-contrib/chainpad</url>
   <properties>
     <upstream.artifactId>chainpad</upstream.artifactId>
-    <!--<upstream.version>${version.unsnapshot}</upstream.version>-->
-    <upstream.version>5.2.5</upstream.version>
+    <upstream.version>${version.unsnapshot}</upstream.version>
+    <!--<upstream.version>5.2.7</upstream.version>-->
     <upstream.url>https://registry.npmjs.org/${upstream.artifactId}/-/${upstream.artifactId}-${upstream.version}.tgz</upstream.url>
     <extractDir>${project.build.directory}/package</extractDir>
     <webjar.contentDirectory>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</webjar.contentDirectory>
